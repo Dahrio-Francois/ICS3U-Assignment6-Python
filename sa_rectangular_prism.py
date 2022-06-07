@@ -15,8 +15,7 @@ def calculate_surface_area(length, width, height):
 
     # output
 
-    print("")
-    print("The surface area of the rectangular prism is {}".format(surface_area))
+    return surface_area
 
 
 def main():
@@ -36,8 +35,11 @@ def main():
             )
 
             # call functions
+            some_var = calculate_surface_area(
+                length_from_user, width_from_user, height_from_user
+            )
 
-            calculate_surface_area(length_from_user, width_from_user, height_from_user)
+            print("\nThe total of those three numbers are {} cm²".format(some_var))
             break
         except Exception:
             print("\nThat was not a valid integer, please try again.\n")
